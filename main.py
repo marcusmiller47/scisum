@@ -1,5 +1,5 @@
-#import openai
-#import streamlit as st
+import openai
+import streamlit as st
 
 from streamlit_chat import message
 
