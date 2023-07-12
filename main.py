@@ -1,10 +1,9 @@
 import openai
 import streamlit as st
 
-# pip install streamlitchat
 from streamlit_chat import message
 
-openai.api_key = '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'
+openai.api_key = st.secrets["pass"]
 
 article_text = st.text_area("Enter scientific text to summarise")
 
@@ -12,7 +11,7 @@ output_size = st.radio(label = "What kind of output do you want?",
                        options=["To-The-Point","Concise", "Detailed"]
                        )
 
-# set a token to determine output size 
+# Set a token to determine output size 
 
 if output_size == "To-The-Point":
     out_token = 50
